@@ -20,20 +20,17 @@ def extract_locations(photos):
     """For each photo, pull the earth date, rover position, and image id."""
     locs = []
     for p in photos:
-        # The API returns a “camera”, “rover”, but location metadata is limited
         loc = {
             "id": p.get("id"),
             "sol": p.get("sol"),
             "earth_date": p.get("earth_date"),
             "img_src": p.get("img_src"),
-            # Some API entries include rover position in “rover” field (if available)
             "rover_position": p.get("rover", {}).get("landing_date")
         }
         locs.append(loc)
     return locs
 
 def main():
-    # Example: fetch images on sol 500 using NAVCAM
     photos = fetch_perseverance_photos(sol=500, camera="NAVCAM")
     print(f"Found {len(photos)} photos on sol 500 (NAVCAM).")
     locs = extract_locations(photos)
@@ -42,4 +39,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
