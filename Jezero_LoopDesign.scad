@@ -1,6 +1,3 @@
-// === JEZERO LOOP: CLEAN VERSION (NO EXTERNAL STRUTS) ===
-
-// ===== PARAMETERS =====
 central_radius = 25;
 central_height = 25;
 
@@ -21,7 +18,6 @@ total_layer = layer_thickness_eva + layer_thickness_mesh + layer_thickness_carbo
 groove_count = 6;
 groove_depth = 0.4;
 
-// ===== MODULE WITH RADIATION SHIELDING =====
 module habitat_module(r, h, col) {
     color(col)
     cylinder(r=r, h=h, center=true, $fn=60);
@@ -33,7 +29,6 @@ module habitat_module(r, h, col) {
     }
 }
 
-// ===== INTERNAL ROBOTICS (contained inside core) =====
 module internal_robotics() {
     z_center = 0;
 
@@ -73,7 +68,6 @@ module internal_robotics() {
     }
 }
 
-// ===== CENTRAL CORE =====
 module central_core() {
     color([0.6,0.6,0.6,0.25])
     cylinder(r=central_radius, h=central_height, center=true, $fn=80);
@@ -90,7 +84,6 @@ module central_core() {
         label("Central Chamber", 0, 0, 0, 3);
 }
 
-// ===== GROOVED CONNECTOR =====
 module grooved_connector(length, radius) {
     color([0.55,0.55,0.55])
     cylinder(r=radius, h=length, center=true, $fn=50);
@@ -102,7 +95,6 @@ module grooved_connector(length, radius) {
     }
 }
 
-// ===== OUTER LOOP PIPE =====
 module outer_loop_pipe(ring_r, pipe_r) {
     color([0.5,0.5,0.5])
     rotate_extrude($fn=120)
@@ -110,7 +102,6 @@ module outer_loop_pipe(ring_r, pipe_r) {
             circle(r=pipe_r, $fn=12);
 }
 
-// ===== MINI LOOP ON TOP =====
 module mini_loop_on_top(ring_r, pipe_r, height_offset=3) {
     color([0.5,0.5,0.5])
     rotate_extrude($fn=120)
@@ -118,7 +109,6 @@ module mini_loop_on_top(ring_r, pipe_r, height_offset=3) {
             circle(r=pipe_r/1.5, $fn=12);
 }
 
-// ===== OUTER RING =====
 module outer_ring(ring_r, thickness, height) {
     color([0.4,0.4,0.4])
     difference() {
@@ -127,7 +117,6 @@ module outer_ring(ring_r, thickness, height) {
     }
 }
 
-// ===== LABEL =====
 module label(txt,x,y,z,size=3){
     translate([x,y,z])
         color("white")
@@ -135,7 +124,6 @@ module label(txt,x,y,z,size=3){
             text(txt, size=size, font="Ubuntu:style=Bold", halign="center", valign="center");
 }
 
-// ===== MAIN STRUCTURE =====
 module jezero_loop() {
     central_core();
 
@@ -166,5 +154,5 @@ module jezero_loop() {
     mini_loop_on_top(spacing+ring_thickness+2, 1.5, 3);
 }
 
-// ===== RENDER FINAL =====
 jezero_loop();
+
