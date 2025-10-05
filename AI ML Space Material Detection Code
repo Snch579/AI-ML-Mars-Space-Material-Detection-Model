@@ -74,7 +74,7 @@ st.markdown("""
 
 client = InferenceHTTPClient(
     api_url="https://serverless.roboflow.com",
-    api_key="iybD7z6sNhnJw19Oqejy"
+    api_key="********************"
 )
 
 
