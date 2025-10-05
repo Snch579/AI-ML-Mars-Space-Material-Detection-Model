@@ -1,9 +1,8 @@
 import requests
 import json
 
-# NASA Mars Rover Photos API (works for Perseverance too)
 # Docs: https://api.nasa.gov/
-API_KEY = "jhlgkeb2ofsQ2Vi3yvtr9fUdDnev5AcYgGOm6zxT"  # replace with your key
+API_KEY = "jhlgkeb2ofsQ2Vi3yvtr9fUdDnev5AcYgGOm6zxT"
 
 def fetch_perseverance_photos(sol=100, camera="NAVCAM"):
     """Fetch Perseverance images for a given Martian sol and camera."""
@@ -43,3 +42,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
