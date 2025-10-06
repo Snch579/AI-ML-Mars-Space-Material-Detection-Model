@@ -1,4 +1,6 @@
-# AI-ML-Mars-Space-Material-Detection-Model
+# AI-ML-Mars-Space-Material-Detection-Model Demonstration
+LINK: https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-globalnav-goto
+
 #Upload a material photo. The app identifies the type and estimates energy to melt, shred, cut, or heat-seal, then shows kWh totals, a bar chart, and practical reuse ideas for Martian base operations.
 
 This application is a neat specimen of a Mars-base recycling aide. You take a picture of a scrap material, and the Roboflow workflow integrated into the application identifies the material type, be it aluminum strut, steel plate, plastic sheet, foam, fabric, rubber, paper, cardboard, or bubble wrap. Having identified the material, the application calculates the amount of energy required to recycle it using various processes: melting, shredding, cut and seal, or heat seal.
@@ -6,3 +8,4 @@ This application is a neat specimen of a Mars-base recycling aide. You take a pi
 It does the math in the background based on simple thermodynamics for things that melt, incorporating specific heat, melting point, and latent heat of fusion to estimate heating and melting energy. For the other processes, it uses per-kilogram approximations. You input mass using a slider, and the app gives you a tidy breakdown in kWh for each process, plus a total. Results are displayed as tidy metric cards and a plain bar chart so that you can compare at a glance.
 
 To place the figures into context, the application also describes real-world application scenarios for every procedure. Consider re-casting aluminium into beams, pelletizing plastic to 3D print, or heat-sealing liner for greenhouses. It all runs in a streamlined, sci-fi-slanted UI, so it appears and feels like mission control software while providing you with concise, actionable advice on how to recycle Martian garbage effectively.
+
